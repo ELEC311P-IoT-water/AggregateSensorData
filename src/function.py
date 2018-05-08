@@ -60,5 +60,5 @@ def lambda_handler(event, context):
     res = query(start, end, table_name)
     yesterday = get_yesterday()
     readers = event["read_access_ids"]
-    resp = putS3(bucket, yesterday + ".json", res["Items"], readers)
+    resp = putS3(bucket, yesterday + ".json", res, readers)
     return resp
