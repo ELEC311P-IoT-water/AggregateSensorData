@@ -18,7 +18,7 @@ def get_dynamodb_access() -> Policy:
     )
   ]
   policyDoc = awacs.aws.Policy( Statement = statements )
-  return Policy( PolicyName = Sub("DynamoDbGammaAccess-${AWS::StackName}")
+  return Policy( PolicyName = Sub("DynamoDbPRODAccess-${AWS::StackName}")
                , PolicyDocument = policyDoc
                )
 
